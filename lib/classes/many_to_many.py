@@ -14,9 +14,6 @@ class Game:
         if isinstance(title, str) and len(title) > 0 and not hasattr(self, 'title'):
             self._title = title
 
-        # else:
-        #     raise Exception("")
-
     def results(self, new_result = None):
         if new_result and isinstance(new_result, Result):
             if new_result not in self._results:
@@ -53,9 +50,6 @@ class Player:
     def username(self, username):
             if isinstance(username, str) and 2 <= len(username) <= 16:
                 self._username = username
-
-            # else:
-            #     raise Exception("")
 
     def results(self, new_result = None):
         if new_result and isinstance(new_result, Result):
@@ -101,9 +95,6 @@ class Result:
     def score(self, score):
         if isinstance(score, int) and 1 <= score <= 5000 and not hasattr(self, 'score'):
             self._score = score
-
-        # else:
-        #     raise Exception("")
             
     @property
     def player(self): 
@@ -114,9 +105,6 @@ class Result:
         if isinstance(player, Player):
             self._player = player
 
-        # else:
-        #     raise Exception("")
-            
     @property
     def game(self):
         return self._game
@@ -125,5 +113,3 @@ class Result:
     def game(self, game):
         if isinstance(game, Game):
             self._game = game
-        # else:
-        #     raise TypeError("Game must be of type Game")
