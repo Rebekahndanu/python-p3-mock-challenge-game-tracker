@@ -83,8 +83,7 @@ class Result:
 
         game.results(self)
         game.players(player)
-
-        # Append the current instance to the 'all' list
+        
         Result.all.append(self)
 
     @property
